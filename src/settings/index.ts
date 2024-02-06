@@ -10,8 +10,7 @@ import { Signal } from '@lumino/signaling'; // Import the Signal class
 const PLUGIN_ID = 'ploomber-extension:settings';
 
 export interface JupySQLSettings {
-    showDeployNotebook: boolean;
-    showFormatSQL: boolean;
+    showShareNotebook: boolean;
 
 }
 
@@ -32,10 +31,9 @@ const plugin_settings: JupyterFrontEndPlugin<void> = {
          * @param setting Extension settings
          */
         function loadSetting(setting: ISettingRegistry.ISettings): void {
-            const showDeployNotebook = setting.get('showDeployNotebook').composite as boolean;
-            const showFormatSQL = setting.get('showFormatSQL').composite as boolean;
+            const showShareNotebook = setting.get('showShareNotebook').composite as boolean;
 
-            settingsChanged.emit({ showDeployNotebook, showFormatSQL });
+            settingsChanged.emit({ showShareNotebook });
 
         }
 

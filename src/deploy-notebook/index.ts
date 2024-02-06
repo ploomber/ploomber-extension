@@ -32,7 +32,7 @@ export class DeployingExtension
     private panel: NotebookPanel;
 
     private _onSettingsChanged = (sender: any, settings: JupySQLSettings) => {
-        if (!settings.showDeployNotebook) {
+        if (!settings.showShareNotebook) {
             this.deployNotebookButton.parent = null;
         } else {
             this.panel.toolbar.insertItem(10, 'deployNB', this.deployNotebookButton);
