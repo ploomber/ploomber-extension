@@ -2,4 +2,4 @@
 
 ## 0.1.0
 
-* Share notebook button added in toolbar for sharing notebooks to Ploomber Cloud
+* Share notebook button added in toolbar for deploying notebooks to Ploomber Cloud

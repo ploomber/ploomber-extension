@@ -3,13 +3,6 @@
 > [!TIP]
 > Deploy AI apps for free on [Ploomber Cloud!](https://ploomber.io/?utm_medium=github&utm_source=ploomber-extension)
 
-> [!NOTE]
-> Code in the `main` branch is compatible with JupyterLab 4 (`0.4.x` or higher releases),
-> the `jupyterlab3` branch contains code compatible with JupyterLab 3 (`0.3.x` releases).
-> We'll keep backporting some features and making `0.3.x` releases for some time, but
-> we highly recommend upgrading to JupyterLab 4 for a better experience.
-
-
 ## Install
 
 ```bash
@@ -48,8 +41,8 @@ jupyter server extension list # backend extension
 # tool.hatch.build.targets.wheel.shared-data, and fix any issues
 
 # activate manually
-jupyter server extension enable jupysql_plugin
-jupyter labextension enable jupysql_plugin
+jupyter server extension enable ploomber_extension
+jupyter labextension enable ploomber_extension
 
 
 jupyter labextension develop . --overwrite
