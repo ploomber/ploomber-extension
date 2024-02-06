@@ -1,6 +1,6 @@
 # ploomber_extension
 
-[![Github Actions Status](https://github.com/neelasha23/ploomber-extension.git/workflows/Build/badge.svg)](https://github.com/neelasha23/ploomber-extension.git/actions/workflows/build.yml)
+[![Github Actions Status](https://github.com/ploomber/ploomber-extension.git/workflows/Build/badge.svg)](https://github.com/ploomber/ploomber-extension.git/actions/workflows/build.yml)
 A JupyterLab extension.
 
 This extension is composed of a Python package named `ploomber_extension`
