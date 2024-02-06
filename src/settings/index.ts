@@ -9,12 +9,12 @@ import { Signal } from '@lumino/signaling'; // Import the Signal class
 
 const PLUGIN_ID = 'ploomber-extension:settings';
 
-export interface JupySQLSettings {
+export interface ExtensionSettings {
     showShareNotebook: boolean;
 
 }
 
-export const settingsChanged = new Signal<any, JupySQLSettings>({});
+export const settingsChanged = new Signal<any, ExtensionSettings>({});
 
 
 /**

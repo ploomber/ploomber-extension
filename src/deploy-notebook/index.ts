@@ -8,7 +8,7 @@ import { DocumentRegistry } from '@jupyterlab/docregistry';
 import { IDisposable, DisposableDelegate } from '@lumino/disposable';
 
 import { showUploadDialog } from '../dialog';
-import { settingsChanged, JupySQLSettings } from '../settings';
+import { settingsChanged, ExtensionSettings } from '../settings';
 
 /**
  * A notebook widget extension that adds a deployment button to the toolbar.
@@ -31,7 +31,7 @@ export class DeployingExtension
     private deployNotebookButton: ToolbarButton;
     private panel: NotebookPanel;
 
-    private _onSettingsChanged = (sender: any, settings: JupySQLSettings) => {
+    private _onSettingsChanged = (sender: any, settings: ExtensionSettings) => {
         if (!settings.showShareNotebook) {
             this.deployNotebookButton.parent = null;
         } else {
