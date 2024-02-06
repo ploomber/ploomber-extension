@@ -36,7 +36,7 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install --upgrade pkgmt nox
-        #  pkgmt lint
+          pkgmt lint
 
       - name: Setup node
         uses: actions/setup-node@v3
