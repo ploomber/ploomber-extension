@@ -18,6 +18,6 @@ dot_ploomber = str(Path(c.ServerApp.root_dir, "dot-ploomber"))  # noqa: F821
 # c.ServerApp.log_level = "DEBUG"
 
 
-# patch the ploomber configurationd directory so it doesn't
+# patch the ploomber configuration directory, so it doesn't
 # interfere with the user's configuration
 telemetry.DEFAULT_HOME_DIR = dot_ploomber
