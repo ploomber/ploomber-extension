@@ -148,7 +148,7 @@ describe("Test DeployDialogContent ", () => {
             fireEvent.click(confirmButton)
 
             expect(await screen.findByText("Check your deployment status here:")).toBeVisible()
-            expect(await screen.findByText(`https://platform.ploomber.io/dashboards/${DEFAULT_PROJECT_ID}/${DEFAULT_JOB_ID}`)).toBeVisible()
+            expect(await screen.findByText(`https://www.platform.ploomber.io/applications/${DEFAULT_PROJECT_ID}/${DEFAULT_JOB_ID}`)).toBeVisible()
         })
         /*
         Test Flow: When the notebook has been deployed before
@@ -157,7 +157,7 @@ describe("Test DeployDialogContent ", () => {
             mockJobDeployResult(DEFAULT_PROJECT_ID);
             renderDeployDialogContent(DEFAULT_PROJECT_ID);
             expect(await screen.findByText("Check your deployment status here:")).toBeVisible()
-            expect(await screen.findByText(`https://platform.ploomber.io/dashboards/${DEFAULT_PROJECT_ID}/${DEFAULT_JOB_ID}`)).toBeVisible()
+            expect(await screen.findByText(`https://www.platform.ploomber.io/applications/${DEFAULT_PROJECT_ID}/${DEFAULT_JOB_ID}`)).toBeVisible()
         })
         /*
         Test Flow: When the community user deploys more than one active project
