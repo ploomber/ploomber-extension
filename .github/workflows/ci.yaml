@@ -48,6 +48,7 @@ jobs:
 
       - name: Test
         run: |
+          source env/bin/activate
           nox --session test --verbose
 
   ui-test:
