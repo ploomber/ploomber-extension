@@ -30,8 +30,10 @@ export class DeployingExtension
 
     private deployNotebookButton: ToolbarButton;
     private panel: NotebookPanel;
+    private extensionSettings: boolean;
 
     private _onSettingsChanged = (sender: any, settings: ExtensionSettings) => {
+        this.extensionSettings = settings.showShareNotebook;
         if (!settings.showShareNotebook) {
             this.deployNotebookButton.parent = null;
         } else {
@@ -61,6 +63,12 @@ export class DeployingExtension
         this.deployNotebookButton.node.setAttribute("data-testid", "share-btn");
 
         panel.toolbar.insertItem(10, 'deployNB', this.deployNotebookButton);
+
+        if (!this.extensionSettings) {
+            this.deployNotebookButton.parent = null;
+        } else {
+            this.panel.toolbar.insertItem(10, 'deployNB', this.deployNotebookButton);
+        }
 
         return new DisposableDelegate(() => {
             this.deployNotebookButton.dispose();
