@@ -47,6 +47,9 @@ Then to upload the package to PyPI, do:
 twine upload dist/*
 ```
 
+*Note:* if you have issues uploading, upgrade `twine` and `pkginfo`.
+We recently encountered [this issue](https://github.com/pypi/warehouse/issues/15611#issuecomment-2003569493)
+
 ### NPM package
 
 To publish the frontend part of the extension as a NPM package, do:
